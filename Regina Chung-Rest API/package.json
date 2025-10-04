@@ -1,0 +1,16 @@
+{
+  "name": "week",
+  "version": "1.0.0",
+  "description": "INM420 template",
+  "main": "index.js",
+  "scripts": {
+    "start": "lite-server --baseDir=\"public\""
+  },
+  "author": "Regina Chung",
+  "license": "private",
+  "private": true,
+  "devDependencies": {
+    "lite-server": "^2.6.1"
+  },
+  "keywords": []
+}

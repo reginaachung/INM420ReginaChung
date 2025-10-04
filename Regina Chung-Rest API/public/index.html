@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regina Chung</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@3.0.0/reset.min.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Current Weather</h1>
+        </header>
+
+        <section class="search-section">
+            <label for="location">Select Location:</label>
+            <select id="location">
+                <option value="">Choose a city...</option>
+                <option value="Toronto">Toronto</option>
+                <option value="Taipei">Taipei</option>
+                <option value="Amsterdam">Amsterdam</option>
+                <option value="Orlando">Orlando</option>
+            </select>
+            <button id="search-btn">Get Weather</button>
+        </section>
+
+        <div class="error-message" id="error"></div>
+
+        <article class="weather-display" id="weather-display">
+            <h2 class="location-name" id="location-name"></h2>
+            <div class="weather-info">
+                <div class="temperature" id="temperature"></div>
+                <img class="weather-icon" id="weather-icon" alt="Weather icon">
+            </div>
+            <p class="weather-description" id="description"></p>
+            <div class="weather-details">
+                <div class="detail-item">
+                    <div class="detail-label">Feels Like</div>
+                    <div class="detail-value" id="feels-like"></div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-label">Humidity</div>
+                    <div class="detail-value" id="humidity"></div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-label">Wind Speed</div>
+                    <div class="detail-value" id="wind"></div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-label">UV Index</div>
+                    <div class="detail-value" id="uv"></div>
+                </div>
+            </div>
+        </article>
+
+    </div>
+
+    <script src="./assets/js/script.js" defer="true"></script>
+</body>
+
+</html>

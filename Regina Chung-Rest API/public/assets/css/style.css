@@ -1,0 +1,193 @@
+ * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #9da9b5 0%, #6e7f91 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            background-color: #f2ece6;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            max-width: 500px;
+            width: 100%;
+            padding: 40px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: #4a5a6a;
+            font-size: 2em;
+            font-weight: 300;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #6e7f91;
+            font-size: 0.9em;
+        }
+
+        .search-section {
+            margin-bottom: 30px;
+        }
+
+        label {
+            display: block;
+            color: #4a5a6a;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+
+        select {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #9da9b5;
+            border-radius: 10px;
+            background-color: white;
+            color: #4a5a6a;
+            font-size: 1em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        select:hover {
+            border-color: #6e7f91;
+        }
+
+        select:focus {
+            outline: none;
+            border-color: #4a5a6a;
+            box-shadow: 0 0 0 3px rgba(74, 90, 106, 0.1);
+        }
+
+        button {
+            width: 100%;
+            padding: 15px;
+            background-color: #4a5a6a;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1em;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 15px;
+        }
+
+        button:hover {
+            background-color: #6e7f91;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(74, 90, 106, 0.3);
+        }
+
+        button:active {
+            transform: translateY(0);
+        }
+
+        .weather-display {
+            background-color: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin-top: 20px;
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .location-name {
+            color: #4a5a6a;
+            font-size: 1.5em;
+            font-weight: 500;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .weather-info {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .temperature {
+            font-size: 3em;
+            color: #4a5a6a;
+            font-weight: 300;
+        }
+
+        .weather-icon {
+            width: 80px;
+            height: 80px;
+        }
+
+        .weather-description {
+            text-align: center;
+            color: #6e7f91;
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+
+        .weather-details {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #9da9b5;
+        }
+
+        .detail-item {
+            text-align: center;
+        }
+
+        .detail-label {
+            color: #6e7f91;
+            font-size: 0.85em;
+            margin-bottom: 5px;
+        }
+
+        .detail-value {
+            color: #4a5a6a;
+            font-size: 1.1em;
+            font-weight: 500;
+        }
+
+        .error-message {
+            background-color: #bfa88c;
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 20px;
+            display: none;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #6e7f91;
+            font-size: 0.85em;
+        }
