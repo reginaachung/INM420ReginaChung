@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wanderlust Travel</title>
+    
+    <!-- reset css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@3.0.0/reset.min.css" />
+
+    <!-- Library CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide@3.6.0/dist/css/glide.core.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css">
+
+    <!-- My Stylesheet -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <h1>Wanderlust Travel</h1>
+            <ul>
+                <li><a href="#destinations">Destinations</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#map">Map</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Slider (Library 1: Glide.js) -->
+    <section id="home">
+        <div class="glide">
+            <div class="glide-track" data-glide-el="track">
+                <ul class="glide__slides">
+                    <li class="glide__slide">
+                        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&h=600&fit=crop"
+                            alt="Mountains">
+                        <div class="slide-text">
+                            <h2>Explore Mountains</h2>
+                        </div>
+                    </li>
+                    <li class="glide__slide">
+                        <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=1600&h=600&fit=crop"
+                            alt="Beach">
+                        <div class="slide-text">
+                            <h2>Tropical Paradise</h2>
+                        </div>
+                    </li>
+                    <li class="glide__slide">
+                        <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=1600&h=600&fit=crop"
+                            alt="City">
+                        <div class="slide-text">
+                            <h2>Urban Adventures</h2>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="glide__arrows" data-glide-el="controls">
+                <button class="glide__arrow glide__arrow--left" data-glide-dir="<">‹</button>
+                <button class="glide__arrow glide__arrow--right" data-glide-dir=">">›</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Destinations -->
+    <section id="destinations">
+        <h2 data-aos="fade-up">Popular Destinations</h2>
+        <div class="destinations-grid">
+            <div class="card" data-aos="fade-up">
+                <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=400&h=300&fit=crop"
+                    alt="Paris">
+                <h3>Paris, France</h3>
+                <p>City of lights</p>
+            </div>
+            <div class="card" data-aos="fade-up" data-aos-delay="100">
+                <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=300&fit=crop" alt="Alps">
+                <h3>Swiss Alps</h3>
+                <p>Mountain beauty</p>
+            </div>
+            <div class="card" data-aos="fade-up" data-aos-delay="200">
+                <img src="https://images.unsplash.com/photo-1552733407-5d5c46c3bb3b?w=400&h=300&fit=crop"
+                    alt="Maldives">
+                <h3>Maldives</h3>
+                <p>Tropical heaven</p>
+            </div>
+            <div class="card" data-aos="fade-up" data-aos-delay="300">
+                <img src="https://images.unsplash.com/photo-1549144511-f099e773c147?w=400&h=300&fit=crop" alt="Tokyo">
+                <h3>Tokyo, Japan</h3>
+                <p>Modern culture</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery (Library 2: Lightbox2) -->
+    <section id="gallery">
+        <h2 data-aos="fade-up">Travel Gallery</h2>
+        <div class="gallery-grid">
+            <a href="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=1200&h=800&fit=crop"
+                data-lightbox="travel" data-title="Sunset">
+                <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=300&h=200&fit=crop"
+                    alt="Sunset">
+            </a>
+            <a href="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&h=800&fit=crop"
+                data-lightbox="travel" data-title="Mountains">
+                <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=300&h=200&fit=crop"
+                    alt="Mountains">
+            </a>
+            <a href="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=1200&h=800&fit=crop"
+                data-lightbox="travel" data-title="Beach">
+                <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=300&h=200&fit=crop" alt="Beach">
+            </a>
+            <a href="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=1200&h=800&fit=crop"
+                data-lightbox="travel" data-title="City">
+                <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=300&h=200&fit=crop" alt="City">
+            </a>
+        </div>
+    </section>
+
+    <!-- Map (Library 3: Leaflet) -->
+    <section id="map">
+        <h2 data-aos="fade-up">Travel Map</h2>
+        <div id="travel-map"></div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <h3>JavaScript Libraries Used:</h3>
+        <ul>
+            <li>1. Glide.js - Image slider</li>
+            <li>2. Lightbox2 - Gallery viewer</li>
+            <li>3. Leaflet - Interactive map</li>
+            <li>4. AOS - Scroll animations</li>
+        </ul>
+        <p>&copy; 2025 Wanderlust Travel</p>
+    </footer>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide@3.6.0/dist/glide.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+
+    <!-- My JavaScript -->
+    <script src="./assets/js/script.js" defer="true"></script>
+</body>
+
+</html>
